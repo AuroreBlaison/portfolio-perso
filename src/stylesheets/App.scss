@@ -6,7 +6,6 @@
   text-align: center;
   font-family: $font-perso-bold;
 
-
   .header,
   .footer {
     background-color: $color-amande;
@@ -24,17 +23,16 @@
     li {
       padding: 0 2rem
     }
-
-    ;
   }
 
   .presentation {
     background-color: white;
     display: flex;
     flex-direction: column;
-
+   
     @media screen and (min-width: 992px) {
       flex-direction: row;
+      height: 100vh;
     }
 
     .visuel {
@@ -60,10 +58,9 @@
         @media screen and (min-width: 992px) {
           text-align: none;
 
-          bottom: 30%;
-          top: 30%;
+          bottom: 40%;
+          top: 40%;
           left: 34vw;
-
         }
 
         img {
@@ -75,7 +72,6 @@
             width: 15rem;
             height: 15rem;
           }
-
         }
       }
     }
@@ -90,7 +86,6 @@
         max-width: 50rem;
         margin: auto auto;
       }
-      
     }
   }
 
@@ -103,7 +98,6 @@
     @media screen and (min-width: 992px) {
     padding-top: 5rem;
     }
-
 
     .container-competences {
       position: relative;
@@ -133,20 +127,11 @@
 
         }
 
-        // background-color: $color-lt-pink;
-        // height: 70vh;
-        // width: 70vw;
-        // display: flex;
-        // justify-content: space-evenly;
-        // align-items: center;
-
         .front,
         .back {
           background-color: $color-amande;
           height: 40vh;
-         
           margin: 2rem;
-
           display: flex;
           justify-content: center;
           align-items: center;
