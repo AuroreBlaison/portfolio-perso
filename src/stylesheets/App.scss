@@ -6,186 +6,262 @@
   text-align: center;
   font-family: $font-perso-bold;
 
+  h1 {
+    padding-top: 1rem;
+  }
+
+  p {
+    font-family: $font-perso-main;
+  }
+
+  .header {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+  }
+
   .header,
   .footer {
-    background-color: $color-amande;
+    color: white;
+    background-color: $color-main;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      padding: 0 2rem;
+    }
+
+    a:hover {
+      -webkit-text-stroke: 0.5px;
+      -webkit-text-stroke-color: $color-pink;
+      text-shadow: 0 0 15px $color-pink;
+    }
 
     ul li {
       display: inline-block;
-      // margin: 0 5rem;
-      font-size: larger;
+      font-size: xx-large;
       text-transform: capitalize;
     }
 
-    li {
-      padding: 0 2rem
+    @media screen and (max-width: $sm-breakpoint) {
+      flex-direction: column;
+
+      ul li {
+        display: block;
+      }
     }
   }
 
   .presentation {
-    background-color: white;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%), url("../img/background.jpg");
+    background-size: cover;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-   
-    @media screen and (min-width: 992px) {
-      flex-direction: row;
-      height: 100vh;
-    }
+    justify-content: center;
+    align-items: center;
 
-    .visuel {
-      position: relative;
 
-      #motif {
-        height: 30vh;
-        width: 100%;
+    .presentation-wrapper {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 1rem;
+      width: 60vw;
 
-        @media screen and (min-width: 992px) {
-          height: 100%;
-          width: 40vw;
+      @media screen and (min-width: $sm-breakpoint) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        flex-basis: 30%;
+
+        @media screen and (min-width: $sm-breakpoint) {
+          width: 15rem;
+          height: 15rem;
         }
       }
 
-      #portrait {
-        text-align: center;
-        position: absolute;
-        bottom: -5rem;
-        left: 0;
-        right: 0;
+      .contenu-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 60%;
+        padding: 2rem;
 
-        @media screen and (min-width: 992px) {
-          text-align: none;
+        .cv {
+          max-width: 20rem;
+          height: 3rem;
+          border-radius: 1rem;
+          margin: 0 auto;
+          background-color: $color-main;
+          border: none;
 
-          bottom: 40%;
-          top: 40%;
-          left: 34vw;
+          a {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            padding: 0 2rem;
+          }
+
+          // a:hover {
+          //   color: $color-pink;
+          // }
         }
 
-        img {
-          width: 10rem;
-          height: 10rem;
-          border-radius: 50%;
+        .cv:hover {
+          box-shadow: 0 0 15px $color-pink;
+          border: solid 1px $color-pink;
+        }
 
-          @media screen and (min-width: 992px) {
-            width: 15rem;
-            height: 15rem;
+        .contenu {
+          color: white;
+          font-size: larger;
+
+          #name {
+            @include no-margin;
+            color: $color-pink;
+            font-family: $font-perso-signature;
+
+            // text-shadow: 0 0 15px $color-pink, 0 0 15px $color-pink ;
+            animation: animate 1.5s linear infinite;
+          }
+
+          h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: lighter;
           }
         }
       }
     }
 
-    .contenu {
-      margin: 0 auto;
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      max-width: 30rem;
+    @keyframes animate {
+      0% {
+        filter: hue-rotate(0deg);
+      }
 
-      @media screen and (min-width: 992px) {
-        max-width: 50rem;
-        margin: auto auto;
+      100% {
+        filter: hue-rotate(360deg);
       }
     }
   }
 
   .competences {
     background-color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
 
-    @media screen and (min-width: 992px) {
-    padding-top: 5rem;
-    }
 
-    .container-competences {
-      position: relative;
-      margin: auto auto;
+    .competences-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
 
-      .couleur {
-        background-color: $color-amande-intermediaire;
-        height: 70vh;
-        width: 70vw;
+      @media screen and (min-width: $sm-breakpoint) {
+        flex-direction: row;
+        justify-content: space-around;
       }
 
-      .competences-wrapper {
-        margin: 0;
-        position: absolute;
-        top: -7rem;
-        bottom: -7rem;
-        right: 4.5rem;
-        left: 4.5rem;
+      .front,
+      .back {
+        cursor: pointer;
+        border-radius: 1rem;
+        background-image: url("../img/background.jpg");
+        background-size: cover;
+        height: 40vh;
+        width: 90vw;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.37);
 
-        @media screen and (min-width: 992px) {
-          display: flex;
-          flex-direction: row;
-          top: 10rem;
-          bottom: 10rem;
-          right: -10rem;
-          left: -10rem;
+        @media screen and (min-width: $sm-breakpoint) {
+          height: 50vh;
+          width: 40vw;
 
         }
 
-        .front,
-        .back {
-          background-color: $color-amande;
-          height: 40vh;
-          margin: 2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        p {
+          color: white;
+          font-size: xx-large;
+          font-weight: bolder;
+          text-transform: uppercase;
 
-          @media screen and (min-width: 992px){
-            height: none;
-            width:40vw ;
-          }
+          @include no-margin;
+        }
 
-          p {
-            color: white;
-            font-size: xx-large;
-            font-weight: bolder;
-            text-transform: uppercase;
+        ul,
+        li {
+          margin: 0;
+          padding: 1rem;
+          display: block;
+          font-family: $font-perso-main;
+          font-weight: bolder;
+          font-size: larger;
+          color: white;
 
-            @include no-margin;
-          }
-
-          ul, li{
-            margin: 0;
-            padding: 0;
-            display: block;
-            font-family: $font-perso-main;
-            font-weight: bolder;
-            font-size: larger;
-            color: $color-dark-amande;
-        
-          }
         }
       }
     }
+
   }
 
   .portfolio {
+    height: 30vh;
 
     .portfolio-wrapper {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-
       .cart {
-        margin: 0 auto;
+        background-color: $color-main-transparent;
+        width: 50vw;
+        margin: 2rem auto;
         border-radius: 8px;
-        padding: 2rem;
-        background-color: $color-lt-pink;
-        width: 35rem;
+        padding: 5rem;
+        font-family: $font-perso-main;
 
-        img {
-          width: 30rem;
-        }
+        // img {
+        //   width: 10rem;
+        // }
       }
     }
   }
 
-  p {
-    font-family: $font-perso-main;
+  .footer {
+    flex-direction: column;
+
+    h1 {
+      font-weight: normal;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      padding-bottom: 2rem;
+      
+      p {
+        font-size: larger;
+      }
+
+      a {
+        font-size: x-large;
+      }
+
+      a:hover {
+        color: $color-pink;
+      }
+    }
+
+
+
   }
+
 }

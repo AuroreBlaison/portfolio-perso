@@ -26,53 +26,33 @@ const Competences = () => {
 
     const handleClickFront = () => {
         setClic({
-         statusFront : !clic.statusFront,
-         statusBack : clic.statusBack,
+            statusFront: !clic.statusFront,
+            statusBack: clic.statusBack,
         })
-
-        // if (clic.status = false) {
-        //     const copyStatus = true
-        //     setClic({
-        //      status : {... clic.status, copyStatus} 
-        //     })
-
-        // } else {
-        //     const copyStatus = false
-        //     setClic({
-        //         status : {... clic.status, copyStatus} 
-        //     })
-        // }
     };
-    
+
     const handleClickBack = () => {
         setClic({
-            statusFront : clic.statusFront,
-            statusBack : !clic.statusBack,
+            statusFront: clic.statusFront,
+            statusBack: !clic.statusBack,
         })
 
     };
 
     return (
-        <div className='competences'>
+        <div className='competences' id="skills">
 
             <h1>Compétences</h1>
 
-            <div className="container-competences">
-                <div className="couleur"></div>
+            <div className="competences-wrapper">
 
-                <div className="competences-wrapper">
-
-                    <div className="front" onClick={handleClickFront}>
-                        {clic.statusFront ? <ul>{affichFront} </ul> : <p>front-end</p>}
-                    </div>
-                    <div className="back" onClick={handleClickBack}>
+                <div className="front" onClick={handleClickFront}>
+                    {clic.statusFront ? <ul>{affichFront} </ul> : <p>front-end</p>}
+                </div>
+                <div className="back" onClick={handleClickBack}>
                     {clic.statusBack ? <ul>{affichBack} </ul> : <p>back-end</p>}
-                    </div>
                 </div>
             </div>
-
-
-
         </div>
     )
 }

@@ -3,14 +3,15 @@ import React from 'react'
 const Header = () => {
     return (
         <div className='header'>
-            <div className="logo">
+            {/* <div className="logo">
                 Aurore Blaison
-            </div>
+            </div> */}
 
             <ul className='nav'>
-                <li>presentation</li>
-                <li>competences</li>
-                <li>portfolio</li>
+                <li> <a href='#prez'>présentation </a></li>
+                <li> <a href='#skills'>compétences</a></li>
+                <li><a href='#projets'>portfolio</a></li>
+                <li><a href='#contact'>contact</a></li>
             </ul>
         </div>
     )

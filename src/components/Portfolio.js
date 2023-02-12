@@ -3,15 +3,13 @@ import Cart from './Cart'
 
 const Portfolio = () => {
     return (
-        <div className="portfolio">
+        <div className="portfolio" id="projets">
 
             <h1>Portfolio</h1>
 
             <div className="portfolio-wrapper">
                <Cart/>  
             </div>
-
-           
         </div>
 
     )

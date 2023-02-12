@@ -1,26 +1,22 @@
 const competences = [
     {
-        name: "HTLM / CSS / JS",
-        category: "front"
+        name: "HTML / CSS / JS",
+        category: "front",
     },
     {
         name: "SASS / BOOTSTRAP",
         category: "front"
     },
     {
-        name: "REACT / REDUX / NEXT.JS",
+        name: "REACT / REDUX / REACT NATIVE",
         category: "front"
     },
     {
-        name: "WORDPRESS",
+        name: "NEXT.JS",
         category: "front"
     },
     {
-        name: "GIT",
-        category: "front"
-    },
-    {
-        name: "PHP / SQL",
+        name: "SQL / PHP",
         category: "back"
     },
     {
@@ -31,7 +27,10 @@ const competences = [
         name: "MONGO DB",
         category: "back"
     },
-   
+    {
+        name: "WORDPRESS",
+        category: "back"
+    },
 ];
 
 export default competences;

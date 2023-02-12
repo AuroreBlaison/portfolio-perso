@@ -2,13 +2,15 @@ $xs-breakpoint: 575px;
 $sm-breakpoint: 767px;
 $md-breakpoint: 991px;
 
-$color-amande: #B9D2CB;
-$color-dark-amande: #5b706a;
-$color-amande-intermediaire: #b9d2cb7f;
-$color-pink: #FFD0D0;
+$color-main: #23446D;
+$color-main-transparent: #23446db2;
+$color-pink: #FF85CE;
 $color-lt-pink: #ffeaf4b4;
 
-@import url('https://fonts.googleapis.com/css2?family=Assistant&family=League+Gothic&display=swap'); 
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Raleway&family=Zilla+Slab:wght@300&display=swap');
+
 
 $font-perso-bold : 'League Gothic', sans-serif;
-$font-perso-main :'Assistant', sans-serif;
+$font-perso-main : 'Raleway', sans-serif;
+$font-perso-signature :'Zilla Slab', serif;
