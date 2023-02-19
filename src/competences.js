@@ -16,7 +16,7 @@ const competences = [
         category: "front"
     },
     {
-        name: "SQL / PHP",
+        name: "SQL / MySQL",
         category: "back"
     },
     {
@@ -24,11 +24,11 @@ const competences = [
         category: "back"
     },
     {
-        name: "MONGO DB",
+        name: "PHP",
         category: "back"
     },
     {
-        name: "WORDPRESS",
+        name: "MONGO DB",
         category: "back"
     },
 ];
