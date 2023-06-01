@@ -17,12 +17,13 @@ const Presentation = () => {
                     <div className="contenu">
                         <h1 id="name">Aurore Blaison</h1>
                         <h2>développeuse web</h2>
-                        <p>Après 12 ans d'expérience en tant que styliste pour de grands groupes, je mets ma créativité au service d'un nouveau défi : devenir développeuse Web.</p>
-                        <p>Dans le cadre de ma formation Développeur Web/Web mobile, je suis à la recherche d'un stage du 27 Mars au 21 Avril 2023.</p>
+                        <p>Styliste expérimentée dans le retail, j'ai fait le choix audacieux d'une reconversion pour devenir développeuse web. <br /> Ma créativité et mon adaptabilité issues de mon parcours artistique sont des atouts uniques dans ma pratique du développement. <br />Déterminée et bienveillante, je suis résolue à monter en compétences et à exploiter mon potentiel créatif dans ce métier en constante évolution.
+                        </p>
+
                     </div>
                     {/* mettre un <a href avec url du cv + un attribut download> au lieu d'une balise bouton */}
                     <button className='cv'>
-                        <a href={cv} download="CV-AURORE-BLAISON">télécharger mon CV</a>
+                        <a href={cv} download="CV-AURORE-BLAISON">Télécharger mon CV</a>
                     </button>
                 </div>
 

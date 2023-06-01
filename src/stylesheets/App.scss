@@ -61,6 +61,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 70vh;
   
     .presentation-wrapper {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
@@ -102,13 +103,13 @@
         padding: 2rem;
 
         .cv {
-          max-width: 20rem;
-          height: 3rem;
+          max-width: 30rem;
+          height: 5rem;
           border-radius: 1rem;
           margin: 0 auto;
           background-color: $color-main;
           border: none;
-
+        
           a {
             cursor: pointer;
             color: white;
