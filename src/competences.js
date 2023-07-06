@@ -15,6 +15,11 @@ const competences = [
         name: "NEXT.JS",
         category: "front"
     },
+   
+    {
+        name: "PHP",
+        category: "back"
+    },
     {
         name: "SQL / MySQL",
         category: "back"
@@ -24,13 +29,10 @@ const competences = [
         category: "back"
     },
     {
-        name: "PHP",
-        category: "back"
-    },
-    {
         name: "MONGO DB",
         category: "back"
     },
+  
 ];
 
 export default competences;
